@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-title> Novo Livro </mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="field">
+      <mat-label for="nome">Nome</mat-label>
+      <input matInput placeholder="Digite o nome do livro" type="text" name="nome" [(ngModel)]="nome" />
+    </mat-form-field>
+
+
+    <mat-form-field class="field">
+      <mat-label for="isbn">ISBN</mat-label>
+      <input matInput placeholder="International Standard Book Number" type="text" name="isbn" [(ngModel)]="isbn" />
+    </mat-form-field>
+    
+    <mat-form-field class="field">
+      <mat-label for="preco">Preço</mat-label>
+      <input matInput placeholder="Preço do livro" type="number" name="preco" [(ngModel)]="preco" />
+    </mat-form-field>
+    
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
+      <a mat-stroked-button routerLink=""> Listar Livros </a>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
